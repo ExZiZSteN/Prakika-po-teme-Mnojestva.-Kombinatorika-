@@ -29,9 +29,12 @@ def cross(ar1,ar2):
         if i in ar2:
             res.append(i)
     return res
-  
+
+
+#Вариант 27
 #1. ((D ∆ C) ∩ (B \ A) ∩ C) ∆ ((B ∪ D) ∩ (D ∆ A))
 #2. (D ∪ B) ∩ ((C ∪ D) \ (B ∩ A)) ∩ ((D \ (C ∩ A)) ∪ (B ∆ A))
 
-print(sim_raz(cross(cross(sim_raz(D,C),raz(B,A)),C),cross(unite(B,D),sim_raz(D,A))))
-print(cross(unite(D,B),cross(raz(unite(C,D),cross(B,A)),unite(raz(D,cross(C,A)),sim_raz(B,A)))))
+print(sim_raz(cross(cross(sim_raz(D,C),raz(B,A)),C),cross(unite(B,D),sim_raz(D,A)))) # 1 пример
+print(cross(unite(D,B),cross(raz(unite(C,D),cross(B,A)),unite(raz(D,cross(C,A)),sim_raz(B,A))))) # 2 пример
+ 
